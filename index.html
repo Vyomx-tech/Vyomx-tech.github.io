@@ -1,0 +1,44 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>VyomX 2.0</title>
+    <style>
+        body { font-family: Arial, sans-serif; margin: 0; padding: 0; background: #0a0a23; color: #ffffff; }
+        header { background: #1a1a40; padding: 20px; text-align: center; }
+        section { padding: 20px; }
+        .animated { animation: fadeIn 2s ease-in-out; }
+        @keyframes fadeIn { from { opacity: 0; } to { opacity: 1; } }
+        .language { margin-top: 10px; font-size: 14px; }
+        footer { background: #1a1a40; text-align: center; padding: 10px; margin-top: 20px; }
+    </style>
+</head>
+<body>
+    <header class="animated">
+        <h1>VyomX 2.0</h1>
+        <p>Reaching for the stars, made in India</p>
+        <div class="language">
+            <button onclick="switchLang('en')">English</button> | 
+            <button onclick="switchLang('hi')">हिंदी</button>
+        </div>
+    </header>
+    <section id="content" class="animated">
+        <h2>Mission</h2>
+        <p id="mission">Building next-gen rockets and satellite systems for future space missions.</p>
+    </section>
+    <footer class="animated">
+        <p>&copy; 2025 VyomX | All rights reserved</p>
+    </footer>
+    <script>
+        const missionText = {
+            en: "Building next-gen rockets and satellite systems for future space missions.",
+            hi: "भविष्य के अंतरिक्ष मिशनों के लिए अगली पीढ़ी के रॉकेट और उपग्रह प्रणाली विकसित करना।"
+        };
+        function switchLang(lang) {
+            document.getElementById("mission").innerText = missionText[lang];
+        }
+    </script>
+</body>
+</html>
